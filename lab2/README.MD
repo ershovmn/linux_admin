@@ -110,7 +110,7 @@ mkdir /mnt/newdisk/abc
 ## 9
 Вставляем новую строку в файл ***/etc/fstab***
 ```shell
-$DISKNAME /mnt/newdisk ext4 noexec,noatime  0 0
+/dev/sda3 /mnt/newdisk ext4 noexec,noatime  0 0
 ```
 ## 10
 ```shell
