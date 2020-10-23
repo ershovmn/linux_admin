@@ -24,10 +24,6 @@ Syncing disks.
 ```shell
 sudo blkid | grep "^/dev/sda3:" | awk -F\" '{ print $2 }' | sudo dd of=/root/NewPartUUID
 ```
-***NewPartUUID***
-```shell
-b86d2976-03
-```
 ## 3
 ```shell
 DISKNAME=$(sudo blkid | grep $(sudo cat /root/NewPartUUID) | awk -F: '{ print $1 }')
