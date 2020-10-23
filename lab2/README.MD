@@ -151,7 +151,7 @@ resize2fs $DISKNAME
 ```
 ## 11
 ```shell
-e2fsck -fv /dev/sda3
+e2fsck -fv $DISKNAME
 ```
 ## 12
 ```shell
