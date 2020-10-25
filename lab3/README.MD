@@ -1,5 +1,4 @@
-# Лабораторная работа №3
-!/bin/sh
+# Лабораторная работа №1
 ## 1
 ```shell
 cat /etc/passwd | awk -F: '{printf("user %s has id %s\n" ,$1, $3)}' > work3.log 
@@ -66,6 +65,7 @@ chmod ug+x /home/test13
 mkdir /home/test14
 ```
 ## 16
+task15
 ```shell
 cp /usr/bin/nano /home/test14
 chown u1 /home/test14/nano
