@@ -1,5 +1,5 @@
 # Лабораторная работа 3
-```shell
+```
 cat /etc/passwd | awk -F: '{printf("user %s has id %s\n" ,$1, $3)}' > work3.log
 passwd -S root | awk '{print $3}' >> work3.log
 cat /etc/group | awk -F: '{print $1}' >> work3.log
