@@ -77,4 +77,4 @@ chmod u+s /home/test14/nano
 mkdir test15
 touch /home/test15/secret_file
 echo "This is secret" > /home/test15/secret_file
-chmod a=wx /home/test15/#!/bin/sh
+chmod a=wx /home/test15/
