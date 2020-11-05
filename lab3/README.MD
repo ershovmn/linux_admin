@@ -42,7 +42,7 @@ cat /etc/group | grep "^g1:*" | awk -F: '{print $4}' >> work3.log
 ```
 ## 11
 ```shell
-usermod --shell /bin/mc u1 
+usermod --shell /usr/bin/mc u1 
 ```
 ## 12
 ```shell
