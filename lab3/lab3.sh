@@ -11,7 +11,7 @@ cat /etc/passwd | grep "^u1:*" | awk -F: '{printf("user %s has id %s\n", $1, $3)
 groups u1 | awk -F: '{print $2}' >> work3.log
 usermod  -G g1 user #9
 cat /etc/group | grep "^g1:*" | awk -F: '{print $4}' >> work3.log #10
-usermod --shell /bin/mc u1 #11
+usermod --shell /usr/bin/mc u1 #11
 useradd u2 -p $(openssl passwd -crypt 87654321) #12
 #13
 mkdir /home/test13
