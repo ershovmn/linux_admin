@@ -63,8 +63,9 @@ chmod ug+x /home/test13
 ## 15
 ```shell
 mkdir /home/test14
+chown u1:g1 /home/test14 -R
+chmod o+wrt,u-t /home/test14
 ```
-task15
 ## 16
 ```shell
 cp /usr/bin/nano /home/test14
