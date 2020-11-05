@@ -23,8 +23,9 @@ chmod u=rw,g=rt,o= -R /home/test13
 chmod ug+x /home/test13
 #15
 mkdir /home/test14
+chown u1:g1 /home/test14 -R
+chmod o+wrt,u-t /home/test14
 #16
-#task15
 cp /usr/bin/nano /home/test14
 chown u1 /home/test14/nano
 chmod u+s /home/test14/nano
