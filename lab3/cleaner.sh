@@ -1,7 +1,7 @@
 #!/bin/sh
-rm -Rf /home/test15
-rm -Rf /home/test14
-rm -Rf /home/test13
+rm -rf /home/test15
+rm -rf /home/test14
+rm -rf /home/test13
 userdel -rf u2
 groupdel g1
 userdel -rf u1
