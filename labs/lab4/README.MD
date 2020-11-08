@@ -110,8 +110,10 @@ yum update
 ```shell
 wget https://github.com/ershovmn/linux_admin/raw/master/labs/lab4/fortunes-ru_1.52-2_all.deb
 alien -r fortunes-ru_1.52-2_all.deb
-yum localinstall fortunes-ru-1.52-3.noarch.rpm
+sudo rpm -i --replacefiles fortunes-ru-1.52-3.noarch.rpm
 ```
 ## 9
 ```shell
+wget https://www.nano-editor.org/dist/v5/nano-5.3.tar.gz
+
 ```
