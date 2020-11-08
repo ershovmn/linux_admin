@@ -53,5 +53,65 @@ yum list installed > task3.log
 ```
 ## 4
 ```shell
-yum deplist gcc > task4_1.log
+yum deplist gcc | grep "provider:" | awk '{print $2}' > task4_1.log
+```
+## 5
+```shell
+mkdir localrepo && cd localrepo
+wget https://github.com/ershovmn/linux_admin/raw/master/labs/lab4/checkinstall-1.6.2-3.el6.1.x86_64.rpm
+yum install createrepo
+createrepo ~/localrepo/
+```
+Создаем файл ***/etc/yum.repos.d/localrepo.repo***
+```
+[localrepo]
+name=localrepo
+enabled=1
+gpgcheck=0
+baseurl=file:///root/localrepo/
+```
+```shell
+yum update
+```
+## 6
+```shell
+yum repolist > task6.log
+```
+```shell
+repo id                 repo name
+
+AppStream               CentOS-8 - AppStream
+BaseOS                  CentOS-8 - Base
+extras                  CentOS-8 - Extras
+localrepo               localrepo
+```
+## 7
+```shell
+ cd /etc/yum.repos.d/
+ find -type f | sed 'p;s/$/.txt/' | xargs -n2 mv
+ mv localrepo.repo.txt localrepo.repo
+ yum update
+ yum list available
+ ```
+ ```shell
+ Last metadata expiration check: 0:11:37 ago on Sun 08 Nov 2020 05:42:22 PM MSK.
+Available Packages
+checkinstall.x86_64             1.6.2-3.el6.1           localrepo
+```
+```shell
+yum install checkinstall
+```
+Возращаем всё
+```shell
+find -type f | sed 'p;s/.txt//' | xargs -n2 mv
+yum update
+```
+## 8
+```shell
+wget https://github.com/ershovmn/linux_admin/raw/master/labs/lab4/fortunes-ru_1.52-2_all.deb
+alien -r fortunes-ru_1.52-2_all.deb
+yum localinstall fortunes-ru-1.52-3.noarch.rpm
+```
+## 9
+```shell
 ```
