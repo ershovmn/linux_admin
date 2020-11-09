@@ -40,8 +40,8 @@ mrproper: clean
         rm -f *~
 
 install:
-        cp bastet /usr/bin/
-        chmod o+x /usr/bin/bastet
+        cp $(PROGNAME) /usr/bin/
+        chmod o+x /usr/bin/$(PROGNAME)
 ```
 Выполняем установку
 ```shell
