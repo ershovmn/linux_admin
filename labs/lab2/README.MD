@@ -233,3 +233,20 @@ sudo mount -t fuse.vmhgfs-fuse .host:/share /mnt/share
 ```shell
 .host:/share /mnt/share fuse.vmhgfs-fuse defaults 0 0
 ```
+## Тестовое задание
+Написать скрипт, который
++ Монтирует две удаленный папки
++ Копирует все файлы и папки из одной папки в другую папку
++ Отмнонтирует удаленные папки  
+[Скрипт](./test.sh)
+```shell
+mkdir /mnt/shares/1/
+mkdir /mnt/shares/2/
+mount -t fuse.vmhgfs-fuse .host:/1 /mnt/shares/1
+mount -t fuse.vmhgfs-fuse .host:/2 /mnt/shares/2
+cp -rc /mnt/shares/1/. /mnt/shares/2/
+umount /mnt/shares/1
+umount /mnt/shares/2
+rm -rf /mnt/shares/1
+rm -rf /mnt/shares/2
+```
