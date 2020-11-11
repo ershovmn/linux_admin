@@ -79,6 +79,17 @@ touch /home/test15/secret_file
 echo "This is secret" > /home/test15/secret_file
 chmod a=wx /home/test15/
 ```
+## Дополнительное задание
+```shell
+rm -rf /home/test15
+rm -rf /home/test14
+rm -rf /home/test13
+userdel -rf u2
+groupdel g1
+userdel -rf u1
+rm -f /etc/skel/readme.txt 
+rm work3.log
+```
 ## Тестовое задание
 Написать скрипт, котрый при созданни нового пользователя, добавляется в его домашний каталог.
 При запуске скрипт должен задавать текущему пользователю новый пароль, который не совпадает с текущим  
