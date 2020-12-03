@@ -56,7 +56,7 @@ yum list installed > task3.log
 yum deplist gcc | grep "provider:" | awk '{print $2}' > task4_1.log
 ```
 ```shell
-yum install yum-tools
+yum install yum-utils
 repoquery -q --installed --whatrequires libgcc > task4_2.log
 ```
 ## 5
