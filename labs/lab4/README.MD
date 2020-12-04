@@ -118,6 +118,10 @@ sudo rpm -i --replacefiles fortunes-ru-1.52-3.noarch.rpm
 ```
 ## 9
 ```shell
-wget https://www.nano-editor.org/dist/v5/nano-5.3.tar.gz
-
+wget https://www.nano-editor.org/dist/v5/nano-5.4.tar.xz
+tar -xvf nano-5.4.tar.xz
+cd nano-5.4
+./configure --prefix=/usr/ --program-prefix=new
+make
+make install
 ```
