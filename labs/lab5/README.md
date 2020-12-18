@@ -1,15 +1,15 @@
 # Лабораторная работа 5
 ## Что не так
 При загрузке операционной системы, получаем ошибку
-![img1](photo_2020-12-18_12-07-00.jpg)
+![img1](https://github.com/ershovmn/linux_admin/raw/master/labs/lab5/photo_2020-12-18_12-07-00.jpg)
 ## Решение проблемы
 ### Шаг 1
 Смторим файл ***/etc/fstab***  
 Видим, что проблемный диск с неправильным UUID
-![img2](img2.png)
+![img2](https://github.com/ershovmn/linux_admin/raw/master/labs/lab5/img2.png)
 ### Шаг 2
 Смотрим все UUID дисков  
-![img3](img3.png)  
+![img3](https://github.com/ershovmn/linux_admin/raw/master/labs/lab5/img3.png)  
 Понимаем, что у нас неправильный UUID, исправляем его
 ### Шаг 3
 Перемонтируем диск для того, что бы была возможность перезаписи  
@@ -20,7 +20,7 @@ mount -o remount,rw /
 ```shell
 nano /etc/fstab
 ```
-![img4](img4.png)
+![img4](https://github.com/ershovmn/linux_admin/raw/master/labs/lab5/img4.png)
 ### Шаг 4
 ```shell
 reboot
